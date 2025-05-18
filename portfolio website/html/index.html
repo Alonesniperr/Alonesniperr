@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li class="nav-link"><a href="#">Home</a></li>
+        <li class="nav-link"><a href="#">About</a></li>
+        <li class="nav-link"><a href="#">Skills</a></li>
+        <li class="nav-link"><a href="#">Services</a></li>
+        <li class="nav-link"><a href="contact.html">Contact</a></li>
+        
+      </ul>
+      <div class="social-icons-resp">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <div class="nav-logo">
+        <p>Port<span>folio</span></p>
+      </div>
+    </nav>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <main>
+      <div class="image">
+        <img src="../images/itachi.png" alt="image" />
+      </div>
+      <div class="gif">
+        <img src="../images/sharingan.gif" alt="gif" />
+      </div>
+      <div class="intro">
+        <p>
+          My name is <span>Itachi</span><br />and <br />I am
+
+          <span id="element"></span>
+        </p>
+        <button class="btn1">Download CV</button>
+        <button class="btn2">Contact</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="social-icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Frontend Developer"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+      });
+      const hamburger = document.querySelector(".hamburger");
+      const navitems = document.querySelector(".nav-items");
+
+      hamburger.addEventListener("click", () => {
+        navitems.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          navitems.classList.remove("active");
+        })
+      );
+    </script>
+    <!-- <script src="index.js"></script> -->
+  </body>
+</html>

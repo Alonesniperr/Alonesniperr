@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@100&family=Open+Sans&family=Oswald&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+input[type="checkbox"] {
+  --webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+}
+
+#navbar {
+  display: flex;
+}
+
+.nav-logo {
+  padding: 30px;
+}
+
+.nav-items {
+  display: flex;
+  gap: 40px;
+  padding: 29px;
+  cursor: pointer;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(0, 0%, 8%);
+}
+
+.nav-items li {
+  list-style-type: none;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  right: 5%;
+  margin-top: 0em;
+}
+
+.nav-right .btn1 {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+.nav-right .btn2 {
+  background: none;
+  border: 2px solid hsl(0, 0%, 8%);
+  border-radius: 10%;
+  padding: 10px;
+  width: 8em;
+  font-size: 15px;
+  font-weight: 500;
+
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ .hamburger .line1 {
+  transform: rotate(-45deg);
+  width: 25px;
+  transform-origin: right;
+  top: -25px;
+}
+
+input[type="checkbox"]:checked ~ .hamburger .line3 {
+  transform: rotate(45deg);
+  width: 26px;
+  transform-origin: right;
+  top: 20px;
+}
+
+input[type="checkbox"]:checked ~ .hamburger .line2 {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.line1 {
+  height: 3px;
+  width: 35px;
+  margin: 6px;
+  background: black;
+  transition: 0.3s;
+}
+
+.line2 {
+  height: 3px;
+  width: 35px;
+  margin: 6px;
+  background: black;
+  transition: 0.3s;
+}
+.line3 {
+  height: 3px;
+  width: 35px;
+  margin: 6px;
+  background: black;
+  transition: 0.3s;
+}
+
+.btn1,
+.btn2 {
+  margin: 30px;
+}
+
+.back-img {
+  display: flex;
+  position: absolute;
+  right: 11%;
+  top: 18%;
+}
+
+.back-img img {
+  width: 26vw;
+}
+
+.main-text {
+  display: flex;
+}
+
+.main-text {
+  position: absolute;
+  left: 13%;
+  top: 24%;
+}
+
+.main-text span {
+  font-size: 4.5rem;
+  font-family: "Open Sans", sans-serif;
+  -webkit-text-stroke: 3.9px black;
+}
+
+.inner-text {
+  display: flex;
+}
+
+.inner-text span {
+  position: absolute;
+  left: 13%;
+  top: 56%;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+.img-mobile {
+  display: none;
+}
+
+.btn3 {
+  position: absolute;
+  left: 13%;
+  top: 74%;
+  color: white;
+  background: black;
+  border: none;
+  outline: none;
+  padding: 13px;
+  border-radius: 10%;
+  width: 10em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dropdown-menu-1 {
+  display: none;
+  position: absolute;
+  background: white;
+  margin-top: 1em;
+  border-radius: 10%;
+  filter: drop-shadow(2px 5px 6px rgb(43, 42, 42));
+}
+
+.dropdown-menu-1 ul {
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown-menu-1 ul li a {
+  margin: 10px 10px;
+  line-height: 1.8em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.dropdown-menu-2 {
+  display: none;
+  position: absolute;
+
+  background-color: white;
+  margin-top: 1em;
+  border-radius: 10%;
+  filter: drop-shadow(2px 5px 6px rgb(43, 42, 42));
+}
+
+.dropdown-menu-2 ul {
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown-menu-2 ul li a {
+  margin: 10px 10px;
+  line-height: 1.8em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.dropdown-menu-1.active {
+  display: block;
+}
+
+.dropdown-menu-2.active2 {
+  display: block;
+}
+.partners {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  left: 13%;
+  top: 35em;
+  margin: 10px;
+}
+
+.inner-text,
+.partners {
+  gap: 40px;
+}
+
+@media (max-width: 1024px) {
+  .back-img img {
+    width: 29vw;
+    height: 96vh;
+  }
+  .btn3 {
+    position: absolute;
+    left: 13%;
+    top: 100%;
+  }
+  .inner-text span {
+    position: absolute;
+    left: 13%;
+    top: 75%;
+  }
+
+  .main-text {
+    position: absolute;
+    left: 13%;
+    top: 28%;
+  }
+}
+
+@media (max-width: 769px) {
+  .nav-items {
+    display: none;
+  }
+
+  .nav-items {
+    display: block;
+    line-height: 2em;
+  }
+
+  .nav-items {
+    position: fixed;
+    right: -100%;
+    gap: 0;
+    background-color: white;
+    text-align: left;
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.3s;
+  }
+
+  .nav-items.active3 {
+    right: 0;
+  }
+
+  .btn1,
+  .btn2 {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    right: 4%;
+    top: 5%;
+    cursor: pointer;
+  }
+
+  .main-text {
+    position: absolute;
+    left: 8%;
+    top: 28%;
+  }
+
+  .main-text span {
+    font-size: 2.5rem;
+  }
+
+  .inner-text span {
+    position: absolute;
+    left: 8%;
+    top: 56%;
+    font-size: 15px;
+  }
+
+  .btn3 {
+    position: absolute;
+    left: 8%;
+    top: 74%;
+  }
+
+  .back-img img {
+    width: 27vw;
+    height: 71vh;
+  }
+
+  .partners {
+    position: relative;
+    left: 12%;
+    top: 25em;
+  }
+}
+
+@media (max-width: 426px) {
+  .back-img img {
+    display: none;
+  }
+
+  .partners {
+    position: relative;
+    left: 10%;
+    top: 22em;
+    margin: -1em;
+    max-width: 100px;
+    overflow: hidden;
+  }
+
+  .inner-text,
+  .partners {
+    gap: 40px;
+  }
+
+  .btn3 {
+    position: absolute;
+    left: 33%;
+    top: 124%;
+  }
+
+  .main-text br {
+    display: none;
+  }
+
+  .main-text {
+    position: absolute;
+    left: 15%;
+    top: 87%;
+  }
+
+  .main-text span {
+    font-size: 2em;
+  }
+
+  .inner-text span {
+    position: absolute;
+    left: 13%;
+    top: 103%;
+  }
+
+  .img-mobile {
+    display: block;
+  }
+
+  .img-mobile img {
+    width: 100%;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,18 @@
+ #content {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+ }
+ 
+ pre {
+    font-size: 20px;
+    width: auto;
+    height: auto;
+        
+}
+
+b {
+    font-size: 25px;
+    font-family: monospace;
+    text-align: center;
+}

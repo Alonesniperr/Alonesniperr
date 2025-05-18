@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    .navbar {
+      height: 60px;
+      max-width: 100%;
+      background-color: lightseagreen;
+    }
+
+    .nav-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: right;
+      position: sticky;
+      transition: all 0.3s ease-in;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    li a {
+      display: flex;
+      text-decoration: none;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 1.3em;
+      margin: 1vw;
+      color: white;
+    }
+
+    .hamburger {
+      display: none;
+      position: absolute;
+      left: 1%;
+      top: 1%;
+      cursor: pointer;
+    }
+
+    .line {
+      height: 3px;
+      width: 25px;
+      background-color: black;
+      margin: 5px 0;
+    }
+
+    .sub-menu-1 {
+      display: none;
+    }
+
+    .subMenu-1:hover .sub-menu-1 {
+      display: block;
+      position: absolute;
+      background: lightseagreen;
+
+      margin: 2px 3px;
+    }
+    .subMenu-1:hover .sub-menu-1 li {
+      width: 150px;
+      padding: 10px;
+      border-radius: 0;
+      text-align: left;
+      border-bottom: 1px solid black;
+    }
+
+    .sub-menu-2 {
+      display: none;
+    }
+
+    .subMenu-2:hover .sub-menu-2 {
+      display: block;
+      position: absolute;
+      background: lightseagreen;
+      margin: 2px 3px;
+    }
+
+    .subMenu-2:hover .sub-menu-2 li {
+      width: 12vw;
+      padding: 1.5px;
+      border-radius: 0;
+      text-align: left;
+      border-bottom: 1px solid black;
+    }
+
+    .sub-menu3 {
+      display: none;
+    }
+
+    .hover-me:hover .sub-menu3 {
+      display: block;
+      position: absolute;
+      background: lightseagreen;
+      margin-left: 10vw;
+    }
+
+    .contact-form p {
+      position: fixed;
+      left: 36%;
+      top: 8vw;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      font-size: 2.5rem;
+      padding: 2vw;
+    }
+
+    .contact-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-form input {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 11vw;
+      right: 7vw;
+      margin: 20px;
+      width: 50vw;
+      height: 2rem;
+      padding-left: 15px;
+      align-items: center;
+      border: 2px solid black;
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="subMenu-1">
+          <a href="aboutus.html" class="nav-link">About us</a>
+          <div class="sub-menu-1">
+            <ul>
+              <li><a href="#">webliqjfh</a></li>
+              <li><a href="#">gameebvv</a></li>
+              <li><a href="#">pcgrrwbb</a></li>
+              <li><a href="#">hellobtb</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="subMenu-2">
+          <a href="contact.html" target="_self">Contact us</a>
+          <div class="sub-menu-2">
+            <ul>
+              <li><a href="#">anasali</a></li>
+              <li><a href="#">zulfiqarali</a></li>
+              <li><a href="#">guidovanrossum</a></li>
+              <li class="hover-me">
+                <a href="#">More</a>
+                <div class="sub-menu3">
+                  <ul>
+                    <li><a href="#">anasali</a></li>
+                    <li><a href="#">ALIBABA</a></li>
+                    <li><a href="#">chalischor</a></li>
+                    <li><a href="#">chalischor</a></li>
+                    <li><a href="#">babakhalnayak</a></li>
+                    <li><a href="#">zafarsupaari</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacypolicy .html">Privacy policy</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+    <div class="contact-form">
+      <p>contact us</p>
+      <form action="/submit" method="post">
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <input type="text" name="email" id="email" placeholder="Email ID" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <input
+          type="number"
+          name="Mobile"
+          id="Mobile"
+          placeholder="Mobile no"
+        />
+        <button class="btn">submit</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
